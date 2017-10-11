@@ -1,3 +1,4 @@
 # The next file will be exclude for push to github
 node_modules/
 package-lock.json
+public/
