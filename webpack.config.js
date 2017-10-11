@@ -5,7 +5,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 //const DEBUG = true;
 
 module.exports = {
-  entry: [path.join(__dirname, './client','js','main.js')],
+  entry: [path.join(__dirname, './client','js', 'main.js')],
   output: {
     path: path.join(__dirname, './public'),
     filename: 'bundle.js'
@@ -23,10 +23,9 @@ module.exports = {
       }
     },{
       test: /\.scss$/,
-      exclude: /node_modules/,
       use: ExtractTextPlugin.extract({
         fallback: "style-loader",
-        loader: ['css-loader', 'sass-loader']
+        use: ['css-loader','sass-loader']
       })
     },{ 
       test: /\.(ttf|eot|woff|svg)$/,
