@@ -1,8 +1,7 @@
 const webpack   = require('webpack');
 const path      = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-//remember config the environmment, if DEBUG the app is on development
-//const DEBUG = true;
 
 module.exports = {
   entry: [path.join(__dirname, './client','js', 'main.js')],
@@ -45,14 +44,6 @@ module.exports = {
       }
     }]
   },
-  
-  devtool: 'source-map',
-
-  devServer: {
-    contentBase: path.join(__dirname, 'public'),
-    inline: true,
-    port: 8080,
-  },
 
   plugins: [
     new ExtractTextPlugin({
@@ -65,10 +56,6 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
-    }),
-    
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
     })
   ]
 };
