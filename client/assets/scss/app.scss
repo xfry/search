@@ -1,3 +1,6 @@
 body {
-  background: gray;
+  background: #eee;
+  &:hover{
+    background: #aaa;
+  };
 }
