@@ -1,0 +1,46 @@
+{
+  "name": "search-app",
+  "version": "1.0.0",
+  "description": "A reactjs single page application for filtering products",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -p",
+    "dev": "webpack-dev-server ",
+    "run": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xfry/search.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "search",
+    "zagalabs"
+  ],
+  "author": "Fredy E Mena Andrade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xfry/search/issues"
+  },
+  "homepage": "https://github.com/xfry/search#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "node-sass": "^4.5.3",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router": "^4.2.0",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "sass-loader": "^6.0.6",
+    "extract-text-webpack-plugin": "^3.0.1"
+  }
+}
