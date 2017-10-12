@@ -1,5 +1,9 @@
 # The next file will be exclude for push to github
 node_modules/
 package-lock.json
-public/
+public/index.html
+public/bundle.js
+public/app.css
+public/bundle.js.map
+public/app.css.map
 babel_cache/
