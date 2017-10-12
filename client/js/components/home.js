@@ -1,9 +1,10 @@
-import React from 'react';
-import Request from '../utils/xhr.js';
-import * as homeActions from '../actions/home-actions';
+import React    from 'react';
+import Request  from '../utils/xhr.js';
 import PetStore from '../stores/pet-store';
+import * as homeActions from '../actions/home-actions';
 
 import SearchForm from './search-form';
+import Header     from './header';
 
 class Home extends React.Component {
   constructor(props) {
@@ -40,7 +41,7 @@ class Home extends React.Component {
     this.setState({
       petList: PetStore.list
     }, () => {
-      console.log('the state has change: ', this.state.petList);
+      //console.log('the state has change: ', this.state.petList);
     });
   }
 
@@ -59,7 +60,7 @@ class Home extends React.Component {
   render() {
     return (
       <section className="home" ref="home">
-        <h1 className="home__title">Pet Finder</h1>
+        <Header />
         <SearchForm />
       </section>
     )
