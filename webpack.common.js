@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  entry: [path.join(__dirname, './client','js', 'main.js')],
+  entry: ['whatwg-fetch', path.join(__dirname, './client','js', 'main.js')],
   output: {
     path: path.join(__dirname, './public'),
     filename: 'bundle.js'
