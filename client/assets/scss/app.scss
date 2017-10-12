@@ -1,5 +1,9 @@
 body {
+  min-width: 320px;
+  max-width: 1024px;
   background: #eee;
+  margin: 0 auto;
+
   &:hover{
     background: #aaa;
   };
