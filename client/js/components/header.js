@@ -3,10 +3,9 @@ import logo   from '../../assets/images/logo.png';
 
 const Header = (props) => {
   return (
-    <div className="home__header">
+    <div className="layout__header appear">
       <header>
-        <img src={logo} />
-        <h1 className="home__title">Find an ideal pet for the ideal person</h1>
+        <img className="layout__image" src={logo} />
       </header>
     </div>
   );
