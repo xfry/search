@@ -1,10 +1,41 @@
-body {
-  min-width: 320px;
-  max-width: 1024px;
-  background: #eee;
-  margin: 0 auto;
+/* FONTS */
+@font-face {
+  font-family: 'Roboto';
+  src:  url("../fonts/Roboto-Regular.ttf"),
+        url("../fonts/Roboto-Black.ttf") format("ttf"),
+        url("../fonts/Roboto-Bold.ttf") format("ttf"),
+        url("../fonts/Roboto-Italic.ttf") format("ttf"),
+        url("../fonts/Roboto-Light.ttf") format("ttf");
+}
 
-  &:hover{
-    background: #aaa;
-  };
+/* GLOBAL STYLE */
+@import './reset';
+@import './global_variables';
+@import './animations';
+
+/* PAGES */
+@import './pages/layout';
+
+
+/* COMPONENTS */
+@import './components/header';
+@import './components/search-form';
+@import './components/home';
+@import './components/pet-list';
+
+/* GENERAL SETTINGS */
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px; 
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  &:visited {
+    color: $dark-gray;
+  }
 }
