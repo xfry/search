@@ -11,7 +11,7 @@ const ConfigRoutes = (
   <Route>
     <Route path="/" component={Layout}>
       <IndexRoute component={Home} />
-      <Route path="search" component={PetInfo} />
+      <Route path="details/:id" component={PetInfo} />
     </Route>
 
     <Route path="*" component={NotFound} />
