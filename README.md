@@ -13,4 +13,6 @@ Then open your terminal, and run the next commands:
 
 ### Run Project as Development Mode
 
+To run this app at development mode just run the below command:
+
 - `npm run dev`
