@@ -16,3 +16,9 @@ Then open your terminal, and run the next commands:
 To run this app at development mode just run the below command:
 
 - `npm run dev`
+
+### Troubleshooting
+
+If for some reason, you have troubles compiling sass files, run the next command to make sure npm rebuild the library `node-sass`
+
+- `npm rebuild node-sass`;
