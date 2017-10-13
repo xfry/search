@@ -1,0 +1,19 @@
+.home__search-form {
+  .form__field {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px #aaa;
+
+    select {
+      background: $primary-red;
+      color: white;
+      padding: $general-padding;
+    }
+  }
+
+  .from__filter-field {
+    .select-field {
+      width: 100%;
+    }
+  }
+}

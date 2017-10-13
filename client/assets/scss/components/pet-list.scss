@@ -1,0 +1,71 @@
+.home__pet-container {
+  border-radius: $general-radius;
+  
+  a {
+    display: block;
+    float: left;
+  }
+
+  .pet-container__card {
+    padding: 10px;
+    margin: 10px 0;
+    background: white;
+  }
+
+  .pet-container__img {
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+  }
+
+  .pet-container__title {
+    display: inline-block;
+    width: 100%;
+    margin: $general-margin;
+    margin-top: 3px;
+    color: #2d51a3;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* iPhone 6 ----------- */
+  @media only screen and (min-width: 300px) {
+  }
+
+  /* iPads (portrait) ----------- */
+  @media only screen and (min-width : 768px) {
+    .pet-container__title {
+      width: 80%;
+    }
+
+    .pet-container__img {
+      display: inline-block;
+      float: left;
+      margin: 5px;
+      width: 80px;
+    }
+  }
+
+  /* Desktops and laptops ----------- */
+  @media only screen  and (min-width : 1224px) {
+  }
+
+  .pet-container__category, .pet-container__type {
+    display: inline-block;
+    margin: $general-margin;
+    background: #f6f6f6;
+    color: #444;
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #aaa;
+  }  
+  
+  .pet-container__type {
+  
+  }
+
+  .pet-container__description { 
+    margin: $general-margin;
+    color: #444;
+  }
+
+}
