@@ -4,7 +4,7 @@ import PetStore from '../stores/pet-store';
 import * as homeActions from '../actions/home-actions';
 
 import SearchForm from './search-form';
-import Header     from './header';
+import PetList    from './pet-list';
 
 class Home extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class Home extends React.Component {
       petList: null,
     }
 
-    this.populateSte = this.populateSte.bind(this);
+    this._populateSte = this._populateSte.bind(this);
   }
 
   getJsonData() {
@@ -37,20 +37,22 @@ class Home extends React.Component {
       });
   }
 
-  populateSte() {
+  _populateSte() {
     this.setState({
-      petList: PetStore.list
+      petList: PetStore.list,
+      filteredList: PetStore.filteredList
     }, () => {
       //console.log('the state has change: ', this.state.petList);
+      localStorage.setItem('list', JSON.stringify(PetStore.list));
     });
   }
 
   componentWillMount() {
-    PetStore.on('change', this.populateSte);
+    PetStore.on('change', this._populateSte);
   }
 
-  componentWillunmount() {
-    PetStore.removeListener('change', this.populateSte);
+  componentWillUnmount() {
+    PetStore.removeListener('change', this._populateSte);
   }
 
   componentDidMount() {
@@ -60,8 +62,11 @@ class Home extends React.Component {
   render() {
     return (
       <section className="home" ref="home">
-        <Header />
         <SearchForm />
+        {
+          this.state.filteredList &&
+          <PetList list={this.state.filteredList}/>
+        }
       </section>
     )
   }
