@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Header from '../components/header';
+
 class Layout extends React.Component {
   constructor(props) {
     super(props);
@@ -8,9 +10,10 @@ class Layout extends React.Component {
 
   render() {
     return (
-      <div className="layout-page">
+      <section className="layout-page" ref="layoutPage">
+        <Header />
         {this.props.children}
-      </div>
+      </section>
     )
   }
 }
