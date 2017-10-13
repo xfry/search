@@ -75,7 +75,7 @@ class Search extends React.Component {
 
   render() {
     return (
-      <form className="home__search-form" ref="searchForm">
+      <form action="" className="home__search-form" ref="searchForm">
         <div className="form__field">
           <TextField 
             description="Find pet"
