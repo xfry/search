@@ -7,3 +7,5 @@ public/bundle.js.map
 public/app.css.map
 client/assests/images/color-palete.png
 babel_cache/
+
+server.js
